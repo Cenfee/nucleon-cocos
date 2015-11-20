@@ -1,0 +1,170 @@
+﻿1.bug：（已修复）
+cocos2d-html5\extensions\cocostudio\loader\parsers\timelineParser-2.x.js
+297:cocostudio导出数据属性名与代码使用的不一致
+old:
+var positionXPercentEnabled = json["PositionPercentXEnable"] || false;
+var positionYPercentEnabled = json["PositionPercentYEnable"] || false;
+new:
+var positionXPercentEnabled = json["PositionPercentXEnabled"] || false;
+var positionYPercentEnabled = json["PositionPercentYEnabled"] || false;
+
+2.bug：
+在main.js 加上
+cc.log(cc.director.getWinSize().width, cc.director.getWinSize().height);
+    cc.log(cc.view.getFrameSize().width, cc.view.getFrameSize().height);
+    cc.log(cc.director.getVisibleSize().width, cc.director.getVisibleSize().height);
+    cc.log(cc.director.getVisibleOrigin().x, cc.director.getVisibleOrigin().y);
+导致程序在android上无法运行
+
+
+3.
+关于热更新，有version.manifest，先下version，没有直接下载project.manifest
+所有关于资源的描述要放在 project.manifest
+zip包的更新都是叠加更新；其他单独资源，会进行MD5匹配，本地有，远程没有，本地会删除。
+版本号变化都会导致热更新，不是通过大小对比
+暂时想到热更新方案：1.完全叠加更新，所有zip都记录起来， 强更的时候可以删除记录 2.传统方法，所有文件md5列出来
+
+4.bug：
+web调试支持 .atlas 文件， 但android调试不支持， 无法实现预加载（举例加载spine骨骼动画, spine动态加载)
+
+5.bug：
+cc.spriteFrameCache 纹理图集，所有图集都是统一管理，注意不同模块的同名文件。
+
+6.bug：(已修复）
+
+cc.path.mainFileName  在web正常， android下提示没有这个function
+cc.path.mainFileName = function(fileName)
+{
+    if(fileName){
+        var idx = fileName.lastIndexOf(".");
+        if(idx !== -1)
+            return fileName.substring(0,idx);
+    }
+    return fileName;
+}
+
+7.bug：
+sp.SkeletonAnimation动画播放结束时调用 销毁在web下正常，在android会挂了
+anim.setAnimationListener(this, function animationStateCallback(anim, trackIndex, type, event, loopCount)
+{
+    if(type == sp.ANIMATION_EVENT_TYPE.END)
+    {
+            anim.setAnimationListener(null, null);
+            anim.clearTracks();  //报错
+            anim.removeFromParent(true);    //报错
+    }
+});
+
+8.bug：
+cc.spriteFrameCache.addSpriteFrames 这个方法，如果第二个参数，为texture，  web正常， android会提示couldn`t load texture file.    如果参数为 imgurl， 都正常。
+
+9.bug：
+如果预先缓存了 spriteFrameCache,  加载cocostudio的json数据时，  web会提示纹理图的 plist没有加载， android正常
+原因是因为web addSpriteFrames时会释放 plist，  cocostudio数据解析时，会检测
+extensions\cocostudio\loader\parsers\timelineParser-2.x.js
+1225行：
+old：
+if(!loadedPlist[resourcePath + plist])
+new:
+if(!loadedPlist[resourcePath + plist] && !cc.spriteFrameCache.getSpriteFrame(path))
+
+10.bug：
+android
+game.manager.layer.LayerManager
+调用removeAllLayerWidthContainer，按js原理 还有一个变量引用，应该不会被回收， 但是C++里面被回收了，只能主动retain
+单例管理器，有个变量Node， 加入到scene里，然后从scene移除Node， C++里面Node会被回收， 变量的引用被无视了， 只能主动retain。
+这个问题非常严重，所有显示对象，不在舞台了，基本上都被认为垃圾了
+目前处理方式，创建时，retain， cleanup时release
+
+11.bug：
+android 没有scheduleUpdate函数，web正常
+if(!cc.director.getScheduler().scheduleUpdate)
+{
+    cc.director.getScheduler().scheduleUpdate = cc.director.getScheduler().scheduleUpdateForTarget;
+}
+
+if(!cc.director.getScheduler().unscheduleUpdate)
+{
+    cc.director.getScheduler().scheduleUpdate = cc.director.getScheduler().unscheduleUpdateForTarget;
+}
+
+12.note：
+android cc.loader._loadResIterator  是同步加载， 而cc._imgLoader（调用cc.loader.loadImg) 是异步加载，  onComplete马上获取不了图片纹理，  把cc.loader.loadImg里面的_addImageAsync 改为 _addImage
+jsb 的 cc.loader._loadResIterator 改为 web 的 cc.loader._loadResIterator  web 是异步的。
+
+/**var data = loader.load(realUrl, url);
+        if (data) {
+            self.cache[url] = data;
+            cb(null, data);
+        } else {
+            self.cache[url] = null;
+            delete self.cache[url];
+            cb();
+        }**/
+       var data = loader.load(realUrl, url, item, function (err, data) {
+                   if (err) {
+                       cc.log(err);
+                       self.cache[url] = null;
+                       delete self.cache[url];
+                       cb();
+                   } else {
+                       self.cache[url] = data;
+                       cb(null, data);
+                   }
+               });
+               if (data) {
+                   self.cache[url] = data;
+                   cb(null, data);
+               } else {
+                   self.cache[url] = null;
+                   delete self.cache[url];
+                   cb();
+               }
+
+
+13.bug：
+this._ui.node.removeFromParent(false);
+this._ui.node.cleanup();
+如上，如果先remove，可能导致下面的node对象无效，因为android，可能会忽然 js的变量引用， 需要主动retain。
+
+14.bug：(已修复）
+removeChild(child,true);  child 的cleanup 没有被调用 在android。   web正常。
+目前处理方式，每个cleanup, 手动调用
+
+15.bug：
+web调试版，android版正常
+web发布版如下
+加载一张图片的时候 addImage, cc.loader 里面会以 域名地址（http://localhost:63342/CandyLegend/publish/html5/） + 相对地址 存放一个key，如果没有销毁这个key， 以相对地址重新加载一张图片时， 加载出来的纹理就是宽高都是0。
+解决办法，cc.loader.getRes(url), 取出res， 然后 再销毁 cc.loader.release(res.src)
+
+
+16.bug：（已修复）
+ ios safari  隐身模式上   没有  getItem 方法。 要这样这里
+ cc.sys.localStorage = window.localStorage
+
+
+17.bug
+ cc.view.setResizeCallback();
+ 微信，横竖屏 会触发两次，第一次是原尺寸，第二次是后尺寸
+ safari， 横竖屏 触发一次，原尺寸。
+
+做1秒延迟，解决两次触发
+延后0.001秒， 获取尺寸则都是后尺寸， 解决尺寸不正常
+
+
+18.bug
+cc.loader.release. releaseAll  jsb 没有释放，没有处理
+改为下面操作
+release : function(url){
+        var cache = this.cache;
+        delete cache[url];
+    },
+
+    /**
+     * Resource cache of all resources.
+     */
+    releaseAll : function() {
+        var locCache = this.cache;
+        for (var key in locCache)
+            delete locCache[key];
+    }

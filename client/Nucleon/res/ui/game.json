@@ -1,0 +1,404 @@
+{
+  "ID": "a2ee0952-26b5-49ae-8bf9-4f1d6279b798",
+  "Version": "2.3.0.0",
+  "Name": "game",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 297.9728,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.2623,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.2083,
+              "Y": 0.3125
+            },
+            "LeftMargin": 297.9728,
+            "RightMargin": 638.0272,
+            "TopMargin": 120.0,
+            "BottomMargin": 320.0,
+            "Tag": 30,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "bg.png",
+                  "Plist": "game/game.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 9.415,
+                  "Y": 5.96
+                },
+                "LeftMargin": -941.5,
+                "RightMargin": -741.5,
+                "TopMargin": -396.0,
+                "BottomMargin": -596.0,
+                "Tag": 31,
+                "ActionTag": 2066503761,
+                "Size": {
+                  "X": 1883.0,
+                  "Y": 1192.0
+                },
+                "Name": "bg_1",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": 443933743,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "PlistSubImage",
+              "Path": "pause_btn.png",
+              "Plist": "game/game.plist"
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "pause_btn1.png",
+              "Plist": "game/game.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "pause_btn.png",
+              "Plist": "game/game.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 69,
+            "Scale9Height": 65,
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 0,
+            "ShadowOffsetY": 0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1021.3495,
+              "Y": 558.4805
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8991,
+              "Y": 0.8726
+            },
+            "PreSize": {
+              "X": 0.0871,
+              "Y": 0.1359
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 971.8495,
+            "RightMargin": 65.1505,
+            "TopMargin": 38.0195,
+            "BottomMargin": 514.9805,
+            "Tag": 33,
+            "ActionTag": -1470954154,
+            "Size": {
+              "X": 99.0,
+              "Y": 87.0
+            },
+            "Name": "pause_btn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 130.384,
+              "Y": 556.3077
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1148,
+              "Y": 0.8692
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 130.384,
+            "RightMargin": 805.616,
+            "TopMargin": -116.3077,
+            "BottomMargin": 556.3077,
+            "Tag": 35,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "level.png",
+                  "Plist": "game/game.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -129.0,
+                "RightMargin": 71.0,
+                "TopMargin": 112.5,
+                "BottomMargin": -87.5,
+                "Tag": 36,
+                "ActionTag": -1021363318,
+                "Size": {
+                  "X": 258.0,
+                  "Y": 175.0
+                },
+                "Name": "level_4",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 48,
+                "LabelText": "999",
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineSize": 0,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 0,
+                "ShadowOffsetY": 0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 43.0703,
+                  "Y": -8.8377
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "Rotation": -20.808,
+                "RotationSkewX": -20.808,
+                "RotationSkewY": -20.808,
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2154,
+                  "Y": -0.0442
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 7.0703,
+                "RightMargin": 120.9297,
+                "TopMargin": 184.8377,
+                "BottomMargin": -32.8377,
+                "Tag": 8,
+                "ActionTag": -1375653193,
+                "Size": {
+                  "X": 72.0,
+                  "Y": 48.0
+                },
+                "Name": "text",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -971244525,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "level",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ProgressInfo": 100,
+            "ImageFileData": {
+              "Type": "Default",
+              "Path": "Default/LoadingBarFile.png",
+              "Plist": ""
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 613.0992,
+              "Y": 550.08
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5397,
+              "Y": 0.8595
+            },
+            "PreSize": {
+              "X": 0.4401,
+              "Y": 0.0781
+            },
+            "LeftMargin": 363.0992,
+            "RightMargin": 272.9008,
+            "TopMargin": 64.92,
+            "BottomMargin": 525.08,
+            "Tag": 9,
+            "ActionTag": -1287537170,
+            "Size": {
+              "X": 500.0,
+              "Y": 50.0
+            },
+            "Name": "progress",
+            "ctype": "LoadingBarObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1136.0,
+          "Y": 640.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "game/game.png",
+        "game/game.plist",
+        "Default/LoadingBarFile.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}

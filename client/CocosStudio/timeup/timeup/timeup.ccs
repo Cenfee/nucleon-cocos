@@ -1,0 +1,15 @@
+<Solution>
+  <PropertyGroup Name="timeup" Version="2.3.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="timeup.csd" Type="Scene" />
+        <Folder Name="timeup">
+          <PlistImageFolder Image="timeup.png" PListFile="timeup.plist" Name=".timeup_PList.Dir">
+            <PlistImageFile Name="timeup_bg.png" Key="timeup/bg.png" />
+          </PlistImageFolder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

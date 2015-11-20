@@ -1,0 +1,204 @@
+{
+  "ID": "1348399e-b21f-4ec2-863d-fd57053a7d8d",
+  "Version": "2.1.5.0",
+  "Name": "login",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "PrePosition": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "PreSize": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "RightMargin": -960.0,
+        "TopMargin": -640.0,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "bg.png",
+              "Plist": "ui/login.plist"
+            },
+            "Tag": 7,
+            "PrePosition": {
+              "X": 0.5322,
+              "Y": 0.5074
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -1.0481,
+            "RightMargin": -62.9519,
+            "TopMargin": -4.7148,
+            "BottomMargin": 4.7149,
+            "ActionTag": 1410920834,
+            "Position": {
+              "X": 510.9519,
+              "Y": 324.7149
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "CColor": {},
+            "Size": {
+              "X": 1024.0,
+              "Y": 640.0
+            },
+            "FrameEvent": "",
+            "Name": "bg_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "PlistSubImage",
+              "Path": "enterGame.png",
+              "Plist": "ui/login.plist"
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "enterGame.png",
+              "Plist": "ui/login.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "enterGame.png",
+              "Plist": "ui/login.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9Width": 349,
+            "Scale9Height": 94,
+            "TouchEnable": true,
+            "Tag": 11,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.779,
+              "Y": 0.2704
+            },
+            "PreSize": {
+              "X": 0.0479,
+              "Y": 0.0562
+            },
+            "LeftMargin": 724.7949,
+            "RightMargin": 189.2051,
+            "TopMargin": 448.9428,
+            "BottomMargin": 155.0572,
+            "ActionTag": 1487186881,
+            "Position": {
+              "X": 747.84,
+              "Y": 173.056
+            },
+            "Scale": {
+              "ScaleX": 5.9999,
+              "ScaleY": 2.9657
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "CColor": {},
+            "Size": {
+              "X": 46.0,
+              "Y": 36.0
+            },
+            "FrameEvent": "",
+            "Name": "Button_3",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "Tag": 5,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.7883,
+              "Y": 0.509
+            },
+            "PreSize": {
+              "X": 0.2083,
+              "Y": 0.3125
+            },
+            "LeftMargin": 756.7394,
+            "RightMargin": 3.2606,
+            "TopMargin": 114.2458,
+            "BottomMargin": 325.7542,
+            "ActionTag": -720369590,
+            "Position": {
+              "X": 756.7394,
+              "Y": 325.7542
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "AnchorPoint": {},
+            "CColor": {},
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "FrameEvent": "",
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Position": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Scale": {
+          "ScaleX": 1.0,
+          "ScaleY": 1.0
+        },
+        "AnchorPoint": {},
+        "CColor": {},
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "FrameEvent": "",
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}

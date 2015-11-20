@@ -1,0 +1,19 @@
+<Solution>
+  <PropertyGroup Name="game" Version="2.3.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="game.csd" Type="Scene" />
+        <Folder Name="game">
+          <PlistImageFolder Image="game.png" PListFile="game.plist" Name=".game_PList.Dir">
+            <PlistImageFile Name="bg.png" Key="bg.png" />
+            <PlistImageFile Name="items_bg.png" Key="items_bg.png" />
+            <PlistImageFile Name="level.png" Key="level.png" />
+            <PlistImageFile Name="pause_btn.png" Key="pause_btn.png" />
+            <PlistImageFile Name="pause_btn1.png" Key="pause_btn1.png" />
+          </PlistImageFolder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

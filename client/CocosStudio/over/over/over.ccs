@@ -1,0 +1,21 @@
+<Solution>
+  <PropertyGroup Name="over" Version="2.3.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="over.csd" Type="Scene" />
+        <Folder Name="over">
+          <PlistImageFolder Image="over.png" PListFile="over.plist" Name=".over_PList.Dir">
+            <PlistImageFile Name="bg.png" Key="bg.png" />
+            <PlistImageFile Name="home_btn.png" Key="home_btn.png" />
+            <PlistImageFile Name="home_btn1.png" Key="home_btn1.png" />
+            <PlistImageFile Name="level.png" Key="level.png" />
+            <PlistImageFile Name="record.png" Key="record.png" />
+            <PlistImageFile Name="replay_btn.png" Key="replay_btn.png" />
+            <PlistImageFile Name="replay_btn1.png" Key="replay_btn1.png" />
+          </PlistImageFolder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

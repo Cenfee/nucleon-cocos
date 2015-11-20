@@ -1,0 +1,3 @@
+ÈÈ¸ü£º
+http://cn.cocos2d-x.org/article/index?type=cocos2d-x&url=/doc/cocos-docs-master/manual/framework/html5/v3/assets-manager/zh.md
+http://cn.cocos2d-x.org/tutorial/show?id=1186

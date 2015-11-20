@@ -1,0 +1,21 @@
+<Solution>
+  <PropertyGroup Name="pause" Version="2.3.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="pause.csd" Type="Scene" />
+        <Folder Name="pause">
+          <PlistImageFolder Image="pause.png" PListFile="pause.plist" Name=".pause_PList.Dir">
+            <PlistImageFile Name="pause_bg.png" Key="pause/bg.png" />
+            <PlistImageFile Name="pause_home_btn.png" Key="pause/home_btn.png" />
+            <PlistImageFile Name="pause_home_btn1.png" Key="pause/home_btn1.png" />
+            <PlistImageFile Name="pause_play_btn.png" Key="pause/play_btn.png" />
+            <PlistImageFile Name="pause_play_btn1.png" Key="pause/play_btn1.png" />
+            <PlistImageFile Name="pause_replay_btn.png" Key="pause/replay_btn.png" />
+            <PlistImageFile Name="pause_replay_btn1.png" Key="pause/replay_btn1.png" />
+          </PlistImageFolder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

@@ -1,0 +1,5 @@
+{
+    "jsList" : [
+     "src/app.js", "src/puremvc-1.0.1.min.js", "src/resource.js", "src/game/AppConstants.js", "src/game/ApplicationFacade.js", "src/game/layer.js", "src/game/controller/StartupCommand.js", "src/game/controller/StartupControllerCommand.js", "src/game/controller/StartupModelCommand.js", "src/game/controller/StartupViewCommand.js", "src/game/manager/animation/AnimationManager.js", "src/game/manager/asset/AssetManager.js", "src/game/manager/http/HttpManager.js", "src/game/manager/layer/LayerManager.js", "src/game/manager/particle/ParticleManager.js", "src/game/manager/responsive/ResponsiveManager.js", "src/game/manager/scene/SceneBase.js", "src/game/manager/scene/SceneConstants.js", "src/game/manager/scene/SceneManager.js", "src/game/manager/socket/SocketManager.js", "src/game/manager/view/ViewManager.js", "src/game/model/login/LoginProxy.js", "src/game/view/login/LoginMediator.js", "src/game/view/login/component/LoginView.js"
+    ]
+}
